@@ -4,6 +4,8 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
+{% include 'test.liquid' %}
+
 {{ content | safe }}
 
 <p><a href="{{ '/' | url }}">← Home</a></p>

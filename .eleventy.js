@@ -28,6 +28,10 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
 
+  eleventyConfig.addFilter("test", (input, param) => {
+    return "{" + param + "}";
+  });
+
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
